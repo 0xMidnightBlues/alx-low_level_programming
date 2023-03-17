@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - program that prints the phrase with proper grammar followed by a new line
+ * main - program that prints the phrase with
+ * proper grammar followed by a new line
  * Return: 0 if exited properly, non-zero otherwise
  */
 
