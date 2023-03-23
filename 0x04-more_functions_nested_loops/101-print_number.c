@@ -10,7 +10,7 @@
 
 void print_number(int a)
 {
-	unsigned long num, x, y;
+	unsigned log num, x, y;
 
 	if (a < 0)
 	{
@@ -20,16 +20,16 @@ void print_number(int a)
 	else
 		num = a;
 
-	y = num;
-	z = 1;
+	x = num;
+	y = 1;
 
-	while (y > 9)
+	while (x > 9)
 	{
-		y /= 10;
-		z *= 10;
+		x /= 10;
+		y *= 10;
 	}
 
-	for (; z >= 1; z /= 10)
-		_putchar(((num / z) % 10) + 48);
+	for (; y >= 1; y /= 10)
+		_putchar(((num / y) % 10) + 48);
 }
 
