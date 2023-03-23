@@ -8,28 +8,16 @@
  * Return: Always 0.
  */
 
-void print_number(int a)
+void print_number(int n)
 {
-	unsigned long num, x, y;
+	unsigned long num = n;
 
-	if (a < 0)
+	if(n < 0)
 	{
-		_putchar(45);
-		num = a * -1;
+		_putchar('-');
+		i *= -1;
 	}
-	else
-		num = a;
-
-	x = num;
-	y = 1;
-
-	while (x > 9)
-	{
-		x /= 10;
-		y *= 10;
-	}
-
-	for (; y >= 1; y /= 10)
-		_putchar(((num / y) % 10) + 48);
+	if (i / 10 != 0)
+		print_number(i / 10);
+	_putchar(i % 10 + '0');
 }
-
