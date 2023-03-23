@@ -3,10 +3,10 @@
 /**
  * main - entry point
  *
- * Return: void
+ * Return: always 0.
  */
 
-void main(void)
+int main(void)
 {
 	int a = 100, b = 1;
 
@@ -33,5 +33,6 @@ void main(void)
 
 	}
 	printf("\n");
+	return (0);
 }
 
