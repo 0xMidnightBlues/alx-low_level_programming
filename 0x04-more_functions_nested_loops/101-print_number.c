@@ -10,7 +10,7 @@
 
 void print_number(int a)
 {
-	unsigned log num, x, y;
+	unsigned long num, x, y;
 
 	if (a < 0)
 	{
