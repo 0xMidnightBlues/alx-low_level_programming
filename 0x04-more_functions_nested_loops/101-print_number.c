@@ -3,16 +3,16 @@
 /**
  * print_number - that prints an integer
  *
- * @a: print int
+ * @n: print int
  *
- * Return: Always 0.
+ * Return: void.
  */
 
 void print_number(int n)
 {
-	unsigned long num = n;
+	unsigned long i = n;
 
-	if(n < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		i *= -1;
