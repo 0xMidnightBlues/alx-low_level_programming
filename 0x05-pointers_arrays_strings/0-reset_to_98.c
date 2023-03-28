@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - takes an int pointer and reset its values to 98
- * n: pointer to change its value
+ * @n: pointer to change its value
  * Return: northing
  */
 
