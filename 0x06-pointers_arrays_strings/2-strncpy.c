@@ -9,22 +9,22 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	unsigned	int	i;
-	char			*arr;
+	int		i;
+	char	*arr;
 
 	i = 0;
-	arr = dst;
+	arr = dest;
 	while (*src && i < n)
 	{
-		*dst = *src;
+		*dest = *src;
 		src++;
-		dst++;
+		dest++;
 		i++;
 	}
 	while (i < n)
 	{
-		*dst = '\0';
-		dst++;
+		*dest = '\0';
+		dest++;
 		i++;
 	}
 	return (arr);

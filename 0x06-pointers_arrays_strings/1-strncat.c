@@ -9,14 +9,17 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	unsigned	int i;
-	unsigned	int	j;
+	int i;
+	int	j;
 
 	j = 0;
 	i = 0;
-	i = ft_strlen(s1);
-	while (s2[j] && j < n)
-		s1[i++] = s2[j++];
-	s1[i] = '\0';
-	return (s1);
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[j] && j < n)
+		dest[i++] = src[j++];
+	dest[i] = '\0';
+	return (dest);
 }
