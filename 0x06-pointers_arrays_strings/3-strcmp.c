@@ -2,8 +2,8 @@
 
 /**
  * _strcmp - compares strings.
- * @dest: dest string
- * @src: src string
+ * @s1: dest string
+ * @s1: src string
  * Return: int of the difference
  */
 

@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _strncopy - copies strings.
+ * _strncpy - copies strings.
  * @dest: dest string
  * @src: src string
+ * @n: length
  * Return: pointer to the resulting string dest
  */
 
