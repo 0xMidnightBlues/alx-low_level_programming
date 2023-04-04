@@ -10,7 +10,7 @@
  * c in the string s, or NULL if the character is not found
  */
 
-char	*ft_strchr(const char *s, int c)
+char	*_strchr(char *s, char c)
 {
 	int		index;
 
