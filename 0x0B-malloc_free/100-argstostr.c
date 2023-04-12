@@ -8,3 +8,36 @@
  * Return: string that concatenates all the arguments
  */
 char *argstostr(int ac, char **av)
+{
+	int	i = 0, j, len_sum = 0;
+	char	*ret;
+
+	while (i < ac)
+	{
+		j = 0;
+		while (av[i][j] != '\0')
+		{
+			j++;
+		}
+		len_sum += j;
+		i++;
+	}
+	ret = malloc(sizeof(char) * len_sum + ac);
+	if (!ret)
+		return (NULL);
+	i = 0;
+	len_sum = 0;
+	while (i < ac)
+	{
+		j = 0;
+		while (av[i][j] != '\0')
+		{
+			ret[len_sum + j] = av[i][j];
+			j++;
+		}
+		ret[len_sum + j++] = '\n';
+		len_sum += j;
+		i++;
+	}
+	return (ret);
+}

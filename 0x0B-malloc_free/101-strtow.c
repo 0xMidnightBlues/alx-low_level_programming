@@ -4,6 +4,6 @@
  * strtow - splits a string into words.
  * @str: string to be splitted
  *
- * Return: 
+ * Return:
  */
 char **strtow(char *str)
