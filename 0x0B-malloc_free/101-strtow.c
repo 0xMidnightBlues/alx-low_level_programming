@@ -34,7 +34,8 @@ char **strtow(char *str)
 
 	if (!str)
 		return (NULL);
-	if (!(tab = (char **)malloc(sizeof(char *) * (countwords(str) + 1))))
+	tab = (char **)malloc(sizeof(char *) * (countwords(str) + 1));
+	if (!(tab))
 		return (NULL);
 	while (str[len] != '\0')
 		len++;
