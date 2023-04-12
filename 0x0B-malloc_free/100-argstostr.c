@@ -12,6 +12,8 @@ char *argstostr(int ac, char **av)
 	int	i = 0, j, len_sum = 0;
 	char	*ret;
 
+	if (ac == 0 || av == NULL)
+		return (NULL);
 	while (i < ac)
 	{
 		j = 0;
@@ -22,7 +24,7 @@ char *argstostr(int ac, char **av)
 		len_sum += j;
 		i++;
 	}
-	ret = malloc(sizeof(char) * len_sum + ac);
+	ret = malloc(sizeof(char) * len_sum + ac + 1);
 	if (!ret)
 		return (NULL);
 	i = 0;
