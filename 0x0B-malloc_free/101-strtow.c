@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
  * countwords - count the words in a str.
  * @s: string
@@ -32,15 +34,19 @@ char **strtow(char *str)
 	char	**tab;
 	int	i = 0, j = 0, k = 0, len = 0;
 
-	if (!str || countwords(str) == 0)
+	len = countwords(str);
+	if (!str || len == 0)
 		return (NULL);
-	tab = (char **)malloc(sizeof(char *) * (countwords(str)));
+	tab = malloc(sizeof(char *) * (len));
 	if (!(tab))
 		return (NULL);
-	while (str[len] != '\0')
-		len++;
-	while (i < countwords(str))
+	while (i < len)
+	{
+		len = 0;
+		while (str[len] != '\0')
+			len++;
 		tab[i++] = (char *)malloc(len);
+	}
 	i = 0;
 	while (str[j] != '\0')
 	{
