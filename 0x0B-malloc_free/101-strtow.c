@@ -32,15 +32,15 @@ char **strtow(char *str)
 	char	**tab;
 	int	i = 0, j = 0, k = 0, len = 0;
 
-	if (!str)
+	if (!str || countwords(str) == 0)
 		return (NULL);
-	tab = (char **)malloc(sizeof(char *) * (countwords(str) + 1));
+	tab = (char **)malloc(sizeof(char *) * (countwords(str)));
 	if (!(tab))
 		return (NULL);
 	while (str[len] != '\0')
 		len++;
 	while (i < countwords(str))
-		tab[i++] = (char *)malloc(len + 1);
+		tab[i++] = (char *)malloc(len);
 	i = 0;
 	while (str[j] != '\0')
 	{
