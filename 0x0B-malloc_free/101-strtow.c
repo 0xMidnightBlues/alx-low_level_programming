@@ -36,14 +36,14 @@ char **strtow(char *str)
 	len = countwords(str);
 	if (!str || len == 0)
 		return (NULL);
-	tab = malloc(sizeof(char *) * (len));
+	tab = malloc(sizeof(char *) * (len + 1));
 	if (!(tab))
 		return (NULL);
 	while (i < len)
 	{
 		word_len = 0;
 		while (str[k] == ' ')
-        		k++;
+			k++;
 		while (str[k] != '\0' && str[k] != ' ')
 		{
 			word_len++;
@@ -52,7 +52,7 @@ char **strtow(char *str)
 		tab[i] = malloc(sizeof(char) * word_len + 1);
 		if (!tab[i])
 			return (NULL);
-		i++;	
+		i++;
 	}
 	k = 0;
 	i = 0;
