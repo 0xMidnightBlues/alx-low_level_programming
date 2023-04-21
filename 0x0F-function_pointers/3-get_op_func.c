@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - returns a pointer to the function that 
+ * get_op_func - returns a pointer to the function that
  * corresponds to the operator given as a parameter
  * @s: operator passed as argument
  *
@@ -23,7 +23,7 @@ int (*get_op_func(char *s))(int, int)
 	while (operations[i].op)
 	{
 		if (strcmp(s, operations[i].op) == 0)
-			return (operations[i].f);	
+			return (operations[i].f);
 		i++;
 	}
 	return (NULL);
