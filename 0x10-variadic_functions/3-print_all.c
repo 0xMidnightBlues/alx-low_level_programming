@@ -3,24 +3,23 @@
 
 /**
  * print_all -  prints anything.
- * @separator: the string to be printed between numbers
- * @n: number of arguments
+ * @format: format of the string
  * @...: arguments to sum
  * Return: sum of parameters
  */
-void print_strings(const char * const format, ...)
+void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int i = 0;
 	char	*strarg;
 
-	if (format)
+	if (!format)
 	{
 		printf("\n");
 		return ;
 	}
 	va_start(ap, format);
-	while (format[i] != NULL)
+	while (format[i] != '\0')
 	{
 		switch (format[i])
 		{
@@ -28,7 +27,7 @@ void print_strings(const char * const format, ...)
 				printf("%c", va_arg(ap, int));
 				break;
 			case 'i':
-				printf("%c", va_arg(ap, int));
+				printf("%d", va_arg(ap, int));
 				break;
 			case 'f':
 				printf("%f", va_arg(ap, double));
@@ -45,7 +44,7 @@ void print_strings(const char * const format, ...)
 				continue;
 		}
 		i++;
-		if (format[i] != NULL)
+		if (format[i] != '\0')
 			printf(", ");
 	}
 	printf("\n");
