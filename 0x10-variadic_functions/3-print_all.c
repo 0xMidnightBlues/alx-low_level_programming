@@ -13,13 +13,8 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	char	*strarg;
 
-	if (!format)
-	{
-		printf("\n");
-		return;
-	}
 	va_start(ap, format);
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
 		switch (format[i])
 		{
@@ -35,9 +30,11 @@ void print_all(const char * const format, ...)
 			case 's':
 				strarg = va_arg(ap, char *);
 				if (strarg != NULL)
+				{
 					printf("%s", strarg);
-				else
-					printf("(nil)");
+					break;
+				}
+				printf("(nil)");
 				break;
 			default:
 				i++;
